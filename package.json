@@ -6,18 +6,27 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate-dev": "npx prisma migrate dev && npx tsx lib/seedTriggers.ts"
   },
   "dependencies": {
+    "@prisma/client": "^5.11.0",
+    "@supabase/auth-helpers-nextjs": "^0.9.0",
+    "@supabase/supabase-js": "^2.41.1",
+    "dotenv": "^16.4.5",
+    "next": "14.1.4",
+    "postgres": "^3.4.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.4"
+    "tsx": "^4.7.1"
   },
   "devDependencies": {
+    "@types/react": "18.2.73",
     "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
     "eslint": "^8",
-    "eslint-config-next": "14.1.4"
+    "eslint-config-next": "14.1.4",
+    "postcss": "^8",
+    "prisma": "^5.11.0",
+    "tailwindcss": "^3.3.0"
   }
 }
