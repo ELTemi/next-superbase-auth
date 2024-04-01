@@ -3,6 +3,8 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import Login from "../_components/Login";
 
+export const dynamic = 'force-dynamic'; 
+
 export default async function LoginPage() {
   const supabase = createServerComponentClient({ cookies });
   const { data } = await supabase.auth.getUser();

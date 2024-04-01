@@ -4,6 +4,8 @@ import { redirect } from "next/navigation";
 import { prisma } from "../lib/db";
 import Logout from "./_components/Logout";
 
+export const dynamic = 'force-dynamic'; 
+
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies });
   const { data } = await supabase.auth.getUser();
